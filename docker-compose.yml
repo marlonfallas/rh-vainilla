@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  horilla-vainilla:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: horilla-vainilla
+    restart: always
+    ports:
+      - "127.0.0.1:8010:8000"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://horilla:${DB_PASSWORD}@postgres-horilla-vainilla:5432/horilla
+    volumes:
+      - ./horilla_data:/app
+      - ./media:/app/media
+      - ./config:/app/config
+    depends_on:
+      postgres-horilla-vainilla:
+        condition: service_healthy
+    networks:
+      - horilla-network
+    command: python manage.py runserver 0.0.0.0:8000
+
+  postgres-horilla-vainilla:
+    image: postgres:16-alpine
+    container_name: postgres-horilla-vainilla
+    restart: always
+    environment:
+      - POSTGRES_DB=horilla
+      - POSTGRES_USER=horilla
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_INITDB_ARGS=--auth-host=scram-sha-256
+    volumes:
+      - /nvme1n1-disk/databases/vainilla/postgres-horilla:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U horilla -d horilla"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - horilla-network
+
+networks:
+  horilla-network:
+    name: horilla-vainilla-network
+    driver: bridge
+
+volumes:
+  media:
+    driver: local

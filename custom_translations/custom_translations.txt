@@ -1,0 +1,31 @@
+# TRADUCCIONES PERSONALIZADAS PARA VAINILLA
+# ==========================================
+# Formato: ORIGINAL|PERSONALIZADO
+
+# Términos de RRHH
+Allowance|Bonificación
+Deduction|Deducción
+Reimbursement|Reembolso
+Leave|Vacaciones
+Attendance|Asistencia
+Payroll|Planilla
+Employee|Colaborador
+Shift|Turno
+Department|Departamento
+Badge ID|Código de Empleado
+
+# Términos financieros
+Basic Pay|Salario Base
+Gross Pay|Salario Bruto
+Net Pay|Salario Neto
+Encashment|Liquidación
+Loan|Préstamo
+Advanced Salary|Adelanto de Salario
+
+# Términos específicos de Costa Rica
+Tax|Impuesto sobre la Renta
+Insurance|CCSS
+Overtime|Horas Extra
+Bonus|Aguinaldo
+Commission|Comisión
+

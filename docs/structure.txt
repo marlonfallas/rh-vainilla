@@ -1,0 +1,13 @@
+.
+├── README.md
+├── configuration
+│   ├── 03-costa-rica-setup.md
+│   └── 04-translations.md
+├── customization
+├── installation
+│   └── 01-requirements.md
+├── maintenance
+│   └── 01-backups.md
+└── structure.txt
+
+4 directories, 6 files

@@ -1,0 +1,3 @@
+[submodule "horilla_data"]
+	path = horilla_data
+	url = https://github.com/horilla-opensource/horilla.git

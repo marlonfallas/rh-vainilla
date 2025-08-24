@@ -1,0 +1,65 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Horilla Original Source (es un submodulo)
+# horilla_data/
+
+# Database
+/nvme1n1-disk/databases/
+*.sql
+*.sql.gz
+*.dump
+
+# Media and Static Files
+media/
+staticfiles/
+static/
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Docker volumes
+postgres-data/
+redis-data/
+
+# Backups
+*.backup
+*.bak
+backups/
+/sdb-disk/backups/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Certificates (sensitive)
+*.pem
+*.key
+*.crt
+*.csr
+
+# Custom - No subir
+custom_translations/backup/
