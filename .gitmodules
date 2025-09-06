@@ -1,3 +1,6 @@
 [submodule "horilla_data"]
 	path = horilla_data
 	url = https://github.com/horilla-opensource/horilla.git
+[submodule "customizations"]
+	path = customizations
+	url = https://github.com/marlonfallas/rh-vainilla-personalizado.git
